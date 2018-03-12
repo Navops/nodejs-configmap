@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-configmap",
+  "version": "1.0.0",
+  "description": "Allows node.js servers to read and track kubernetes configmap volume mounts",
+  "main": "cmp/configmap.js",
+  "scripts": {
+    "lint": "eslint src test",
+    "prepare": "rimraf cmp/ && babel src/ --out-dir cmp/",
+    "prepublishOnly": "rimraf cmp/ && babel src/ --out-dir cmp/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Navops/nodejs-configmap.git"
+  },
+  "keywords": [
+    "k8s",
+    "kubernetes",
+    "configmap",
+    "config"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Navops/nodejs-configmap/issues"
+  },
+  "homepage": "https://github.com/Navops/nodejs-configmap#readme",
+  "dependencies": {
+    "chokidar": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.16.0",
+    "babel-eslint": "7.0.0",
+    "babel-preset-es2015": "^6.16.0",
+    "eslint": "3.6.1",
+    "eslint-plugin-import": "1.16.0",
+    "rimraf": "2.5.4"
+  }
+}
